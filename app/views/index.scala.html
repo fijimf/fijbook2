@@ -1,0 +1,16 @@
+@(message: String)
+
+    @main("Welcome to Play") {
+        <div class="container">
+            <div class="row">
+                <h1>Jim's Super Chat Room</h1>
+            </div>
+            <div class="row">
+                <div class="span10"><input id = "newMessage" size="100" type="text" style="min-width:100%;"/></div>
+                <div class="span2"><button class=" btn btn-primary" onclick="submitMessage();">Submit</button></div>
+            </div>
+            <div class="row">
+                <div class="span12"><textarea class="span12" id="messages" cols="60" rows ="20"></textarea></div>
+            </div>
+        </div>
+    }
