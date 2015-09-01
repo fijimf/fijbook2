@@ -10,6 +10,8 @@ case class Order(bettor: Bettor, side: HomeAway, price: Int, size: Int, timestam
 
   override def compare(that: Order): Int = {
     import scala.math.Ordered.orderingToOrdered
-    (this.side, this.price, this.timestamp.getMillis, this.size, this.bettor).compare((that.side, that.price, that.timestamp.getMillis, that.size, that.bettor))
+    val tuple: (HomeAway, Int, Long, Int, Bettor) = (this.side, this.price, this.timestamp.getMillis, this.size, this.bettor)
+    val tuple2: (HomeAway, Int, Long, Int, Bettor) = (that.side, that.price, that.timestamp.getMillis, that.size, that.bettor)
+    tuple.compare(tuple2)
   }
 }
